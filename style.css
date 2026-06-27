@@ -1,0 +1,362 @@
+:root {
+    --blue-900: #082a78;
+    --blue-800: #0a3ea3;
+    --blue-600: #1776e8;
+    --blue-400: #59bcff;
+    --cyan: #55f0ff;
+    --white: #ffffff;
+    --glass: rgba(255, 255, 255, 0.16);
+    --glass-strong: rgba(255, 255, 255, 0.24);
+    --line: rgba(255, 255, 255, 0.32);
+    --text-soft: rgba(255, 255, 255, 0.78);
+    --shadow: 0 28px 80px rgba(4, 24, 75, 0.36);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--white);
+    background:
+        radial-gradient(circle at 18% 18%, rgba(85, 240, 255, 0.42), transparent 25%),
+        linear-gradient(135deg, #071a55 0%, #0b48b4 48%, #28a7ff 100%);
+    display: grid;
+    place-items: center;
+    padding: 34px;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.shape {
+    position: fixed;
+    z-index: 0;
+    pointer-events: none;
+    filter: drop-shadow(0 18px 34px rgba(4, 24, 75, 0.3));
+}
+
+.square {
+    width: 104px;
+    height: 104px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #0b3eaa, #36c7ff);
+    transform: rotate(14deg);
+}
+
+.circle {
+    width: 142px;
+    height: 142px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 32% 28%, #ffffff, #60ddff 28%, #1557c9 78%);
+}
+
+.square-one {
+    top: 8%;
+    left: 5%;
+}
+
+.square-two {
+    right: 7%;
+    top: 16%;
+    width: 78px;
+    height: 78px;
+    transform: rotate(-18deg);
+}
+
+.square-three {
+    left: 12%;
+    bottom: 10%;
+    width: 62px;
+    height: 62px;
+    transform: rotate(32deg);
+}
+
+.circle-one {
+    right: 12%;
+    bottom: 8%;
+}
+
+.circle-two {
+    left: 44%;
+    top: 7%;
+    width: 68px;
+    height: 68px;
+    opacity: 0.72;
+}
+
+.weather-shell {
+    position: relative;
+    z-index: 1;
+    width: min(1120px, 100%);
+    display: grid;
+    grid-template-columns: minmax(300px, 0.8fr) minmax(320px, 1.2fr);
+    gap: 22px;
+}
+
+.hero-panel,
+.weather-card {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--glass);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(18px);
+}
+
+.hero-panel {
+    padding: clamp(24px, 4vw, 38px);
+}
+
+.weather-card {
+    padding: clamp(22px, 4vw, 34px);
+}
+
+.eyebrow {
+    margin: 0 0 12px;
+    color: var(--cyan);
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 18px;
+    font-size: clamp(3.2rem, 7vw, 6.6rem);
+    line-height: 0.95;
+    letter-spacing: 0;
+}
+
+h2 {
+    margin-bottom: 8px;
+    font-size: clamp(1.8rem, 4vw, 3.1rem);
+    line-height: 1.05;
+}
+
+h3 {
+    margin-bottom: 0;
+}
+
+.intro {
+    color: var(--text-soft);
+    line-height: 1.7;
+}
+
+.search-form {
+    display: grid;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.search-form label {
+    color: var(--text-soft);
+    font-weight: 800;
+}
+
+.search-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+}
+
+input {
+    width: 100%;
+    min-height: 50px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.12);
+    padding: 0 14px;
+    outline: none;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.62);
+}
+
+input:focus {
+    border-color: var(--cyan);
+}
+
+.search-row button,
+.location-button {
+    min-height: 50px;
+    border: 0;
+    border-radius: 8px;
+    color: var(--blue-900);
+    background: var(--white);
+    padding: 0 18px;
+    font-weight: 900;
+}
+
+.location-button {
+    width: 100%;
+    margin-top: 12px;
+    color: var(--white);
+    background: linear-gradient(135deg, var(--blue-600), var(--cyan));
+}
+
+.message {
+    min-height: 22px;
+    margin: 16px 0 0;
+    color: var(--text-soft);
+    font-weight: 700;
+}
+
+.weather-top,
+.temperature-row,
+.forecast-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+#updatedTime,
+#feelsLike,
+#timezone {
+    color: var(--text-soft);
+}
+
+.weather-icon {
+    width: 96px;
+    height: 96px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 25%, #ffffff, #66ddff 34%, #1768d7 84%);
+    font-size: 1.7rem;
+    font-weight: 900;
+}
+
+.temperature-row {
+    margin: 34px 0;
+    justify-content: flex-start;
+}
+
+#temperature {
+    min-width: 190px;
+    font-size: clamp(4.5rem, 11vw, 8.2rem);
+    line-height: 0.9;
+}
+
+#condition {
+    margin-bottom: 8px;
+    font-size: clamp(1.4rem, 3vw, 2.1rem);
+    font-weight: 900;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.details-grid article,
+.forecast-item {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--glass-strong);
+    padding: 16px;
+}
+
+.details-grid span,
+.forecast-item span {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-soft);
+    font-size: 0.82rem;
+    font-weight: 800;
+}
+
+.details-grid strong,
+.forecast-item strong {
+    font-size: 1.1rem;
+}
+
+.forecast {
+    margin-top: 28px;
+}
+
+.forecast-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.forecast-item {
+    min-height: 122px;
+    display: grid;
+    align-content: space-between;
+}
+
+.forecast-item em {
+    font-style: normal;
+    font-size: 1.15rem;
+    font-weight: 900;
+}
+
+@media (max-width: 900px) {
+    body {
+        padding: 18px;
+        align-items: start;
+    }
+
+    .weather-shell {
+        grid-template-columns: 1fr;
+    }
+
+    .details-grid,
+    .forecast-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .shape {
+        opacity: 0.45;
+    }
+
+    .search-row,
+    .weather-top,
+    .temperature-row,
+    .forecast-heading {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .search-row {
+        display: flex;
+    }
+
+    .search-row button {
+        width: 100%;
+    }
+
+    #temperature {
+        min-width: 0;
+    }
+
+    .details-grid,
+    .forecast-list {
+        grid-template-columns: 1fr;
+    }
+}
