@@ -1,19 +1,22 @@
+# Prodigy-Task-5
+
 # 🌦️ Weather Web Application
 
-A responsive weather application that displays real-time weather information using a weather API. Users can search weather conditions by city or use their current location.
+A modern, responsive **Weather Web Application** built using **HTML, CSS, and JavaScript**. The application fetches real-time weather information using a weather API and displays temperature, humidity, wind speed, weather conditions, and location details.
 
 ---
 
-## 🚀 Features
+## 📌 Features
 
-- Search weather by city
-- Current location weather
-- Temperature
-- Humidity
-- Wind Speed
-- Weather description
-- Responsive design
-- Error handling
+- 🌍 Search weather by city
+- 📍 Detect current location
+- 🌡️ Real-time temperature
+- 💧 Humidity information
+- 🌬️ Wind speed
+- ☁️ Weather condition icons
+- 📱 Responsive interface
+- ⚡ Fast API integration
+- 🎨 Modern UI
 
 ---
 
@@ -21,15 +24,15 @@ A responsive weather application that displays real-time weather information usi
 
 - HTML5
 - CSS3
-- JavaScript
+- JavaScript (ES6)
 - Weather API
 
 ---
 
 ## 📂 Project Structure
 
-```
-Prodigy-Task-5/
+```text
+Weather-Web-App/
 │
 ├── index.html
 ├── style.css
@@ -39,34 +42,92 @@ Prodigy-Task-5/
 
 ---
 
-## ▶️ Getting Started
+# 🚀 Getting Started
 
-1. Clone the repository
+## Clone the Repository
 
 ```bash
-git clone https://github.com/naveenrwt007/Prodigy-Task-5.git
+git clone https://github.com/your-username/weather-web-app.git
 ```
 
-2. Add your Weather API key inside `script.js`.
+## Open the Project
 
-3. Open `index.html`.
+```bash
+cd weather-web-app
+```
 
----
-
-## 🌍 Features
-
-- Live weather updates
-- Responsive UI
-- Search by city
-- Current location support
-- Fast and lightweight
+Open **index.html** in your browser.
 
 ---
 
-## 👨‍💻 Author
+# 🎮 How to Use
 
-Naveen Singh Rawat
+- Enter a city name.
+- Click the Search button.
+- View current weather details.
+- Optionally use current location.
 
 ---
 
-## ⭐ If you found this project useful, please give it a star!
+# 📸 Application Preview
+
+Displays:
+
+- City Name
+- Temperature
+- Humidity
+- Wind Speed
+- Weather Condition
+- Weather Icon
+
+---
+
+# 📱 Responsive Design
+
+Supports:
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile
+
+---
+
+# ⚙️ Weather Logic
+
+Uses:
+
+- Fetch API
+- Async/Await
+- Weather API
+- JSON Parsing
+- DOM Manipulation
+
+---
+
+# 🌟 Future Improvements
+
+- 📅 7-Day Forecast
+- ⏰ Hourly Weather
+- 🌙 Dark Mode
+- 🌍 Multiple Languages
+- ⭐ Favorite Cities
+- 💾 Local Storage
+
+---
+
+# 👨‍💻 Author
+
+**Naveen Singh Rawat**
+
+---
+
+# 📄 License
+
+Licensed under the MIT License.
+
+---
+
+# ⭐ Support
+
+If you found this project helpful, consider giving it a ⭐ on GitHub.
